@@ -3,40 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package at.ac.fh_kufstein_Aufgabe5;
-
-import at.ac.fh_kufstein.uebung03.*;
-
-
 
 /**
  *
  * @author Natascha
  */
-public class vehicle1  extends Benennbar11{
-    private short wheels;
+public class vehicle1 extends Benennbar11 {
 
+    private short wheels;
     private String name;
-    
+
     @Override
     public String getName() {
-       return name;
+        return name;
     }
 
     @Override
     public void setName(String _n) {
-       name = _n;
+        name = _n;
     }
 
     @Override
     public String toString() {
-        return "Mein Vehicle hat " + getPs() + " PS und fährt mit " + getSpeed() + " km/h"; 
+        return "Mein Vehicle hat " + getPs() + " PS und fährt mit " + getSpeed() + " km/h";
     }
-    
-    
-    
-    public enum Color{
+
+    public enum Color {
+
         Black, Silver, Red, Grey, Yellow, Blue;
     }
     private Color farbe;
@@ -44,38 +38,28 @@ public class vehicle1  extends Benennbar11{
     private short doors;
     private boolean started;
     private short speed;
-    
-    public void start()
-    {
+
+    public void start() {
         started = true;
     }
-    
-    public void stop()
-    {
+
+    public void stop() {
         started = false;
     }
-    
-    public void accelerate(short speed)
-    {
-        if(started == true && ps >= 0)
-        {
-        ps+= ps + speed;
-        }
-        else
-        {
+
+    public void accelerate(short speed) {
+        if (started == true && ps >= 0) {
+            ps += ps + speed;
+        } else {
             System.out.println("Das Fahrzeug ist nicht gestartet oder die Geschwindigkeit ist über 250");
-        
-    }
-    }
-        
-    public void slow (short speed)
-    {
-        if(started == true && ps <= 250)
-        {
-        ps+= ps + speed;
+
         }
-        else
-        {
+    }
+
+    public void slow(short speed) {
+        if (started == true && ps <= 250) {
+            ps += ps + speed;
+        } else {
             System.out.println("Das Fahrzeug ist nicht gestartet oder die Geschwindigkeit ist über 250");
         }
     }
@@ -127,20 +111,18 @@ public class vehicle1  extends Benennbar11{
     public void setSpeed(short speed) {
         this.speed = speed;
     }
-    
-    public vehicle1(short w, Color f, short ps, short d)
-    {
+
+    public vehicle1(short w, Color f, short ps, short d) {
         wheels = w;
         farbe = f;
         this.ps = ps;
         doors = d;
         started = false;
         this.speed = 0;
-        
+
     }
 
-   public vehicle1()
-   {
-       
-   }
+    public vehicle1() {
+
+    }
 }

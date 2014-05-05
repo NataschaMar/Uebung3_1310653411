@@ -5,7 +5,7 @@
  */
 package uebung3_1310653411_neu;
 
-import at.ac.fh_kufstein.uebung03.*;
+
 
 /**
  *

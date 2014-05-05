@@ -17,26 +17,25 @@ public class Liste<T> {
         array = (T[]) (new Object[size]);
     }
 
-    @Override
-    public String toString() {
-        String listenInhalt = "";
-        for (T a : array)
-        {
-            listenInhalt += a+ "\n";
-        }
-        return listenInhalt; 
-       }
-    
-
     public void save(T value) {
-        for (int i = 0; i < array.length;i++) {
+        for (int i = 0; i < array.length; i++) {
 
             if (array[i] == null) {
                 array[i] = value;
                 System.out.println("Es wurde gespeichert");
                 break;
-            } 
+            }
         }
 
     }
+
+    @Override
+    public String toString() {
+        String listenInhalt = "";
+        for (T a : array) {
+            listenInhalt += a + "\n";
+        }
+        return listenInhalt;
+    }
+
 }
